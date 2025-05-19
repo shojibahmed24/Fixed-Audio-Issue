@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>X AI Assistant</title>
+    <script defer src="renderer.js"></script>
+    <link href="output.css" rel="stylesheet" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'; object-src 'self'">
+  </head>
+  <body class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex flex-col items-center justify-center text-white font-sans p-4">
+    <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-2xl shadow-2xl w-full max-w-3xl text-center">
+      <h1 class="text-4xl font-bold mb-6 drop-shadow-lg">🎥 Live Screen & 🗣️ Voice Assistant</h1>
+
+      <div class="flex justify-center gap-4 mb-6">
+        <button id="startScreenBtn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-md transition-all duration-300">
+          📺 Start Screen Share
+        </button>
+        <button id="startVoice" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-md transition-all duration-300">
+          🎤 Start Talking
+        </button>
+      </div>
+
+      <video autoplay id="screenVideo" class="w-full rounded-xl border-4 border-white shadow-lg mb-6"></video>
+      <div id="loader" class="hidden text-white mt-4 animate-pulse">⏳ Thinking...</div>
+      <div id="chatHistory" class="mt-6 max-h-60 overflow-y-auto space-y-2 text-left bg-white/10 p-4 rounded-xl"></div>
+    </div>
+  </body>
+</html>
